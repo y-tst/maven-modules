@@ -26,7 +26,9 @@ public class Demo {
 
         User createdUser = new User(name, surname, birthday);
 
-        BankCard createdBankCard = CardUser.createBankCard(createdUser, bankCardType);
+        CardUser cardUser = new CardUser();
+
+        BankCard createdBankCard = cardUser.createBankCard(createdUser, bankCardType);
 
         System.out.println("Brand new card for " + createdBankCard.getUser() + " was issued.");
         System.out.println("The Card number is  " + createdBankCard.getNumber());

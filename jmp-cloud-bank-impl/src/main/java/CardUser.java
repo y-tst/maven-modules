@@ -3,7 +3,7 @@ import java.util.Random;
 public class CardUser implements Bank {
 
     @Override
-    public static BankCard createBankCard(User user, BankCardType bankCardType) {
+    public  BankCard createBankCard(User user, BankCardType bankCardType) {
 
         Random random = new Random();
         String restDigits = " " + String.valueOf(random.nextInt(9999))
