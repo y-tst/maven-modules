@@ -11,7 +11,7 @@ public enum BankCardType {
         this.firstFourDigits = firstFourDigits;
     }
 
-    public String getfirstFourDigits() {
+    public String getFirstFourDigits() {
         return firstFourDigits;
     }
 

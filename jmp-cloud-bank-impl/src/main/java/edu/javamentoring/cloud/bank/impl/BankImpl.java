@@ -10,8 +10,8 @@ public class BankImpl implements Bank {
     @Override
     public BankCard createBankCard(User user, BankCardType bankCardType) {
 
-        Random random = new Random();
-        String restDigits = " " + String.valueOf(random.nextInt(9999))
+        var random = new Random();
+        var restDigits = " " + String.valueOf(random.nextInt(9999))
                 + " " + String.valueOf(random.nextInt(9999))
                 + " " + String.valueOf(random.nextInt(9999));
 

@@ -11,12 +11,12 @@ import java.util.*;
 public class ServiceImpl implements Service {
 
     private final Map<User, List<BankCard>> userStorage = new HashMap<>();
-    private List<Subscription> subscriptions = new ArrayList<>();
+    private final List<Subscription> subscriptions = new ArrayList<>();
 
     @Override
     public void subscribe(BankCard bankCard) {
 
-        User user = bankCard.getUser();
+        var user = bankCard.getUser();
 
         if (!userStorage.containsKey(user)){
             userStorage.put(user, new ArrayList<>());
