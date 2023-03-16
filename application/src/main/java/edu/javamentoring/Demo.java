@@ -3,7 +3,7 @@ package edu.javamentoring;
 import edu.javamentoring.dto.BankCard;
 import edu.javamentoring.dto.BankCardType;
 import edu.javamentoring.dto.User;
-import edu.javamentoring.implementation.CardUser;
+import edu.javamentoring.cloud.bank.impl.BankImpl;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -28,13 +28,14 @@ public class Demo {
             bankCardType = BankCardType.CREDIT;
         } else if (cardType.equals("d")) {
             bankCardType = BankCardType.DEBIT;
-        } else System.out.println("Incorrect type");
+        } else
+            throw new IllegalArgumentException("Incorrect Card type");
 
         User createdUser = new User(name, surname, birthday);
 
-        CardUser cardUser = new CardUser();
+        BankImpl bankImpl = new BankImpl();
 
-        BankCard createdBankCard = cardUser.createBankCard(createdUser, bankCardType);
+        BankCard createdBankCard = bankImpl.createBankCard(createdUser, bankCardType);
 
         System.out.println("Brand new card for " + createdBankCard.getUser() + " was issued.");
         System.out.println("The Card number is  " + createdBankCard.getNumber());

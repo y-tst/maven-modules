@@ -1,5 +1,5 @@
 module jmp.cloud.service.impl {
 
-    requires transitive jmp.bank.api;
+    requires transitive jmp.service.api;
     requires jmp.dto;
 }

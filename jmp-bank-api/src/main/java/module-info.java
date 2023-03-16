@@ -1,5 +1,5 @@
 module jmp.bank.api {
 
     requires jmp.dto;
-    exports edu.javamentoring.bank;
+    exports edu.javamentoring.bank.api;
 }

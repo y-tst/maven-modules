@@ -1,4 +1,4 @@
-package edu.javamentoring.bank;
+package edu.javamentoring.bank.api;
 
 import edu.javamentoring.dto.BankCard;
 import edu.javamentoring.dto.BankCardType;

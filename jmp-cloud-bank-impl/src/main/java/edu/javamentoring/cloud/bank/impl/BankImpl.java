@@ -1,11 +1,11 @@
-package edu.javamentoring.implementation;
+package edu.javamentoring.cloud.bank.impl;
 
-import edu.javamentoring.bank.Bank;
+import edu.javamentoring.bank.api.Bank;
 import edu.javamentoring.dto.*;
 
 import java.util.Random;
 
-public class CardUser implements Bank {
+public class BankImpl implements Bank {
 
     @Override
     public BankCard createBankCard(User user, BankCardType bankCardType) {

@@ -13,12 +13,6 @@
     <dependencies>
         <dependency>
             <groupId>edu.javamentoring</groupId>
-            <artifactId>jmp-dto</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>edu.javamentoring</groupId>
             <artifactId>jmp-bank-api</artifactId>
             <version>1.0</version>
             <scope>compile</scope>

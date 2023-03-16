@@ -1,4 +1,4 @@
-package edu.javamentoring.service;
+package edu.javamentoring.service.api;
 
 import edu.javamentoring.dto.BankCard;
 import edu.javamentoring.dto.Subscription;
@@ -10,6 +10,6 @@ import java.util.Optional;
 public interface Service {
 
     void subscribe(BankCard bankCard);
-    Optional<Subscription> getSubscriptionByBankCardNumber(String s);
+    Optional<Subscription> getSubscriptionByBankCardNumber(String cardNumber);
     List<User> getAllUsers();
 }
