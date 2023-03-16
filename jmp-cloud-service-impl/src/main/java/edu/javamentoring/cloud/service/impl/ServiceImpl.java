@@ -18,9 +18,8 @@ public class ServiceImpl implements Service {
 
         var user = bankCard.getUser();
 
-        if (!userStorage.containsKey(user)){
-            userStorage.put(user, new ArrayList<>());
-        }
+        userStorage.computeIfAbsent(user, u -> new ArrayList<>()).add(bankCard);
+
         userStorage.put(user, new ArrayList<>());
         subscriptions.add(new Subscription(bankCard.getNumber(), LocalDate.now()));
     }
