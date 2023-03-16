@@ -1,3 +1,5 @@
+package edu.javamentoring.dto;
+
 import java.time.LocalDate;
 
 public class User {
@@ -14,7 +16,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "edu.javamentoring.dto.User{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", birthday=" + birthday +

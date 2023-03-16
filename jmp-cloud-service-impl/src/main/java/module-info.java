@@ -1,6 +1,5 @@
-module jmp.service.api {
+module jmp.cloud.service.impl {
 
     requires transitive jmp.bank.api;
     requires jmp.dto;
-    exports sorce.main.java;
 }

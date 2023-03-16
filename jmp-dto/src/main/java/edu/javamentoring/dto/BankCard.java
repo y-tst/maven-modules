@@ -1,3 +1,5 @@
+package edu.javamentoring.dto;
+
 public class BankCard {
 
     private String number;

@@ -1,3 +1,10 @@
+package edu.javamentoring;
+
+import edu.javamentoring.dto.BankCard;
+import edu.javamentoring.dto.BankCardType;
+import edu.javamentoring.dto.User;
+import edu.javamentoring.implementation.CardUser;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -11,10 +18,9 @@ public class Demo {
         String surname = scanner.nextLine();
         System.out.println("Input Date of Birth in format YYYY.MM.DD: ");
         String stringBirthDate = scanner.nextLine();
-        LocalDate birthday = LocalDate
-                .of(Integer.parseInt(stringBirthDate.substring(0, 4))
-                        , Integer.parseInt(stringBirthDate.substring(5, 7))
-                        , Integer.parseInt(stringBirthDate.substring(9)));
+        LocalDate birthday = LocalDate.of(Integer.parseInt(stringBirthDate.substring(0, 4))
+                , Integer.parseInt(stringBirthDate.substring(5, 7))
+                , Integer.parseInt(stringBirthDate.substring(9)));
         System.out.println("Which Card type do you prefer? Credit - input 'c', Debit - input 'd': ");
         String cardType = scanner.nextLine();
         BankCardType bankCardType = null;

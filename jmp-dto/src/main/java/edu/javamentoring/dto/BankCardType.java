@@ -1,3 +1,5 @@
+package edu.javamentoring.dto;
+
 public enum BankCardType {
 
     CREDIT("4444"),

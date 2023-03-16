@@ -1,3 +1,5 @@
+package edu.javamentoring.dto;
+
 import java.time.LocalDate;
 
 public class Subscription {
@@ -12,7 +14,7 @@ public class Subscription {
 
     @Override
     public String toString() {
-        return "Subscription{" +
+        return "edu.javamentoring.dto.Subscription{" +
                 "bankcard='" + bankcard + '\'' +
                 ", startDate=" + startDate +
                 '}';

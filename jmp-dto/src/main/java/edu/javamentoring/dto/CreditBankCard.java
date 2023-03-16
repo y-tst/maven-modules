@@ -1,4 +1,6 @@
-public class CreditBankCard extends BankCard{
+package edu.javamentoring.dto;
+
+public class CreditBankCard extends BankCard {
 
     BankCardType creditCard = BankCardType.CREDIT;
 

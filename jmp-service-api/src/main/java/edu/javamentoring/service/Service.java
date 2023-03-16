@@ -1,3 +1,9 @@
+package edu.javamentoring.service;
+
+import edu.javamentoring.dto.BankCard;
+import edu.javamentoring.dto.Subscription;
+import edu.javamentoring.dto.User;
+
 import java.util.List;
 import java.util.Optional;
 
