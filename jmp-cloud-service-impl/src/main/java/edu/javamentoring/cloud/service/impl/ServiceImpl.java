@@ -7,6 +7,7 @@ import edu.javamentoring.service.api.Service;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ServiceImpl implements Service {
 
@@ -31,5 +32,14 @@ public class ServiceImpl implements Service {
     @Override
     public List<User> getAllUsers() {
         return new ArrayList<>(userStorage.keySet());
+    }
+
+    @Override
+    public List<User> getAllUsersInUppercase(List<User> users) {
+        return users.stream()
+                .map(user -> new User(user.getName().toUpperCase()
+                        , user.getSurname().toUpperCase()
+                        , user.getBirthday()))
+                .collect(Collectors.toUnmodifiableList());
     }
 }

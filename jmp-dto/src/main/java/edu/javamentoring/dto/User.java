@@ -9,6 +9,18 @@ public class User {
     private String surname;
     private LocalDate birthday;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
     public User(String name, String surname, LocalDate birthday) {
         this.name = name;
         this.surname = surname;
