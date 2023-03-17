@@ -8,11 +8,9 @@ import edu.javamentoring.cloud.bank.impl.BankImpl;
 
 import java.util.Scanner;
 
-
 public class Demo {
 
     public static void main(String[] args) {
-
 
         var bankImpl = new BankImpl();
         var service = new ServiceImpl();
@@ -31,8 +29,7 @@ public class Demo {
             bankCardType = BankCardType.CREDIT;
         } else if (cardType.equals("d")) {
             bankCardType = BankCardType.DEBIT;
-        } else
-            throw new IllegalArgumentException("Incorrect Card type");
+        } else throw new IllegalArgumentException("Incorrect Card type");
 
         var createdBankCard = bankImpl.createBankCard(brandNewUser, bankCardType);
 
@@ -46,7 +43,6 @@ public class Demo {
         System.out.println("Performing the check: ");
 
         service.getAllUsers().forEach(System.out::println);
-        service.getSubscriptionByBankCardNumber(createdBankCard.getNumber())
-                .ifPresentOrElse(System.out::println, () -> System.out.println("User has no subscriptions."));
+        service.getSubscriptionByBankCardNumber(createdBankCard.getNumber()).ifPresentOrElse(System.out::println, () -> System.out.println("User has no subscriptions."));
     }
 }

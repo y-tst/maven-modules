@@ -20,7 +20,6 @@ public class ServiceImpl implements Service {
 
         userStorage.computeIfAbsent(user, u -> new ArrayList<>()).add(bankCard);
 
-        userStorage.put(user, new ArrayList<>());
         subscriptions.add(new Subscription(bankCard.getNumber(), LocalDate.now()));
     }
 
